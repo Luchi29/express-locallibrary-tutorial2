@@ -1,0 +1,29 @@
+extends layout
+
+
+block content
+    h1(class='title') Author list
+
+
+    div(class='container' style='text-align: center')
+        table(class='table')
+            thead(style='background-color: #a29bfe')
+                tr(style='color: #fff')
+                    th Author Name
+                    th Date of birth - date of death  
+                    th Actions
+            tbody
+                each author in author_list
+                    tr(class='t-hover') 
+                        td #{author.name} 
+                        td #{author.lifespan}
+                        td 
+                            a(href=author.url)
+                                i(class='icono fas fa-list' style='color: #78C2AD')
+                            a(href=author.url+'/update')
+                                i(class='icono fas fa-edit' style='color: #78C2AD')
+                            a(href=author.url+'/delete')
+                                i(class='icono fas fa-trash-alt' style='color: #78C2AD')
+                                               
+                else
+                    li There are no authors.

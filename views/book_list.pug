@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1(class='title') List of our Books
+
+
+    div(class='container')
+        table(class='table')
+            thead(style='background-color: #a29bfe')
+                tr(style='color: #fff')
+                    th Books
+                    th Author 
+                    th Actions
+            tbody
+                - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0; });
+                each book in book_list
+                    tr(class='t-hover') 
+                        td #{book.title}
+                        td #{book.author.name}
+                        td 
+                            a(href=book.url)
+                                i(class='icono fas fa-list' style='color: #78C2AD')
+                            a(href=book.url+'/update')
+                                i(class='icono fas fa-edit' style='color: #78C2AD')
+                            a(href=book.url+'/delete')
+                                i(class='icono fas fa-trash-alt' style='color: #78C2AD')
+                               
+                                
+                else
+                    li There are no books.
+
+  
+
+        

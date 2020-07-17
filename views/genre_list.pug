@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1(class='title') List of Genres
+
+
+    div(class='container' style='text-align: center')
+        table(class='table')
+            thead(style='background-color: #a29bfe')
+                tr(style='color: #fff')
+                    th Genre
+                    th Actions
+            tbody
+                each genre in genre_list
+                    tr(class='t-hover') 
+                        td #{genre.name}
+                        td 
+                            a(href=genre.url)
+                                i(class='icono fas fa-list' style='color: #78C2AD')
+                            a(href=genre.url+'/update')
+                                i(class='icono fas fa-edit' style='color: #78C2AD')
+                            a(href=genre.url+'/delete')
+                                i(class='icono fas fa-trash-alt' style='color: #78C2AD')
+                               
+                                
+                else
+                    li There are no genres.       
+                
