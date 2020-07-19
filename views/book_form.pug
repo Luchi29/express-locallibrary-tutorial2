@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  h1(class='title') Update Book
+  if (title==='Update Book')
+    h1(class='title') Update Book
+  else
+    h1(class='title') Create Book
+
 
   div(class='container')
     form(method='POST' action='')
@@ -35,4 +39,6 @@ block content
       ul
         for error in errors
           li!= error.msg
-                  
+
+  div(class='return' title='Return') 
+    a(href='/catalog/books' class='previous') &laquo; Previous                

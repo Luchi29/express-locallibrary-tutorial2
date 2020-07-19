@@ -3,9 +3,12 @@ extends layout
 block content
     h1(class='title') List of Genres
 
+    div(class="container")
+        a(class='button-new p-2 mb-4 mt-2 btn' href='/catalog/genre/create') + New Genre
+
 
     div(class='container' style='text-align: center')
-        table(class='table')
+        table(class='table table-responsive-md')
             thead(style='background-color: #a29bfe')
                 tr(style='color: #fff')
                     th Genre

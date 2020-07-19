@@ -3,9 +3,12 @@ extends layout
 block content
     h1(class='title') List of our Books
 
+    div(class="container")
+        a(class='button-new p-2 mb-4 mt-2 btn' href='/catalog/book/create') + New Book
+
 
     div(class='container')
-        table(class='table')
+        table(class='table table-responsive-md')
             thead(style='background-color: #a29bfe')
                 tr(style='color: #fff')
                     th Books

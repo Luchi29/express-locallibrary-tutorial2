@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  h1(class='title') Update Author
+
+  if(title==='Update Author')
+    h1(class='title') Update Author
+  else 
+      h1(class='title') Create Author
 
   div(class='container')
     form(method='POST' action="")
@@ -21,3 +25,5 @@ block content
         for error in errors
           li!= error.msg  
   
+  div(class='return' title='Return') 
+    a(href='/catalog/authors' class='previous') &laquo; Previous
