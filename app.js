@@ -12,8 +12,8 @@ var helmet = require('helmet');
 
 var app = express();
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://username:password@cluster0-6tayg.azure.mongodb.net/<dbname>?retryWrites=true&w=majority';
-mongoose.connect(mongoDB, { useNewUrlParser: true  });
+var mongoDB = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
@@ -34,12 +34,12 @@ app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter); // add catalog routes to middleware chain
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
