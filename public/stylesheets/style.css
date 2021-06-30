@@ -6,21 +6,20 @@
 a {
   color: #00B7FF;
 }
-*/ 
-body{
+*/
+
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
-.navbar{
+.navbar {
   margin-bottom: 50px;
   padding: 20px;
   background-color: #78C2AD !important;
 }
 
-
-.Titulo{
-  color:#2d3436 ;
+.Titulo {
+  color: #2d3436;
   font-size: 60px;
   padding: 40px;
   text-align: center;
@@ -29,36 +28,31 @@ body{
   font-family: 'Noto Serif', serif;
 }
 
-
 .sidebar-nav {
   margin-top: 20px;
   padding: 0;
   list-style: none;
 }
 
-
-.card-deck{
+.card-deck {
   padding: 20px;
   margin-top: 30px;
 }
 
-
-.card{
+.card {
   transition: 0.1ms;
 }
 
-
-.card:hover {opacity: 0.9;}
-
-
-.fas, .far, .card-body {
-    padding: 15px;
-    text-align: center;
-
+.card:hover {
+  opacity: 0.9;
 }
 
+.fas, .far, .card-body {
+  padding: 15px;
+  text-align: center;
+}
 
-.footer{
+.footer {
   position: relative;
   color: aliceblue;
   background-color: #636e72;
@@ -66,60 +60,68 @@ body{
   padding: 20px;
 }
 
-
-.title{
+.title {
   margin: 50px;
   text-align: center;
   color: #2d3436;
 }
 
-
-.container{
+.container {
   margin: 50px;
   padding: 30px;
 }
 
+.t-hover:hover {
+  background-color: #f5f5f5;
+}
 
-.t-hover:hover {background-color: #f5f5f5;}
+.icono:hover {
+  color: royalblue !important;
+}
 
-
-.icono:hover {color:royalblue !important;} 
-
-
-a{
+a {
   text-decoration: none !important;
   color: #2d3436;
 }
 
-
-button{
+button {
   background-color: #78C2AD !important;
   color: #f5f5f5 !important;
-
 }
-
 
 button {
   transition-duration: 0.15s;
 }
 
+button:hover {
+  background-color: cornsilk !important;
+  border: #78C2AD !important;
+  color: teal !important;
+}
 
-button:hover {background-color:cornsilk !important;
-border: #78C2AD !important; color: teal !important;}
+.button-new {
+  background-color: #78C2AD !important;
+  color: #f5f5f5 !important;
+}
 
+.button-new {
+  transition-duration: 0.15s;
+}
 
-form{
+.button-new:hover {
+  background-color: cornsilk !important;
+  border: #78C2AD !important;
+  color: teal !important;
+}
+
+form {
   max-width: 600px;
   margin-left: 250px;
   margin-right: 250px;
-  
 }
 
-
-.form-delete{
+.form-delete {
   margin-left: 2px;
   margin-top: 50px;
   margin-bottom: 10px;
-
 }
-
